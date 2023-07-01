@@ -97,12 +97,21 @@ textarea {
 
 
 html {
-  background-color: #fff;
+  background-color: #5d5b5d;
   height: 100%;
+}
+h1 {
+padding-top: 1em;
+color:white;
+}
+
+.story{
+    color:white;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  font-weight:700;
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
@@ -119,10 +128,10 @@ body {
   /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
   color: #fff;
   line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
-  width: 30%;
+  font-size: 400;
+  /*background-color: #f16059;*/
+  height: auto;
+ /* width: 30%;*/
   display: flex;
   justify-content: center;
   align-items: center;
@@ -223,7 +232,15 @@ body {
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
+@media (min-width:780px) {
+    .div-1, .div-2, .div-3 {
+        flex-basis: 30%;
+    }
+    .div-1, .div-2 {
+        border-right: 1px solid #ffcd00;
+        padding-right:1.5em;
+    }
+}
 @media print {
     *,
     *:before,
